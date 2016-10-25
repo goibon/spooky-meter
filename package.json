@@ -1,0 +1,33 @@
+{
+  "name": "spooky-meter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "standard",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goibon/spooky-meter.git"
+  },
+  "keywords": [
+    "spooky",
+    "halloween",
+    "skeletons",
+    "spoopy"
+  ],
+  "author": "Kasper Lind Sørensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goibon/spooky-meter/issues"
+  },
+  "homepage": "https://github.com/goibon/spooky-meter#readme",
+  "devDependencies": {
+    "standard": "^8.4.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
