@@ -1,7 +1,6 @@
 /* global $ */
 
 function initializeUI () {
-  const randomButton = $('.spooky-button.random')
   const spookyMeterImage = $('#spooky-meter').children('img')
   const spookyMeterImageSource = spookyMeterImage.attr('src')
   const title = $('title')
@@ -12,12 +11,6 @@ function initializeUI () {
                             '2Spooky - It is too late a skeleton is inside you']
 
   var spookyLevel = spookyMeterImageSource[spookyMeterImageSource.length - 5]
-
-  randomButton.click(function (event) {
-    randomizeSpookyLevel()
-    updateSpookyMeterImage()
-    updateTitle()
-  })
 
   function randomizeSpookyLevel () {
     spookyLevel = Math.floor(Math.random() * (4 - 0 + 1)) + 0

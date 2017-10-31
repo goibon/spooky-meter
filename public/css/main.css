@@ -5,31 +5,3 @@ body {
 .spookymeter {
     display: inline;
 }
-
-.btn-spooky {
-    background-color: #b0581d;
-    border: 0;
-    color: #fff;
-}
-
-.btn-spooky:active {
-    background-color: #b0581d;
-    border: 0;
-    color: #fff;
-}
-
-.btn-spooky:focus {
-    background-color: #f4f1ec;
-    color: #b0581d;
-}
-
-.btn-spooky:hover {
-    background-color: #f4f1ec;
-    color: #b0581d;
-}
-
-.btn-spooky:visited {
-    background-color: #b0581d;
-    border: 0;
-    color: #fff;
-}
