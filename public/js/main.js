@@ -31,6 +31,15 @@ function initializeUI () {
     }
     title.html(spookyDescriptions[spookyLevel])
   }
+
+  window.PullToRefresh.init({
+    mainElement: 'body',
+    onRefresh: function () {
+      randomizeSpookyLevel()
+      updateSpookyMeterImage()
+      updateTitle()
+    }
+  })
 }
 
 $(function () {

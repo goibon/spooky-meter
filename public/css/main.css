@@ -5,3 +5,11 @@ body {
 .spookymeter {
     display: inline;
 }
+
+.ptr--content .ptr--icon {
+    color: #fff;
+}
+
+.ptr--content .ptr--text {
+    color: #fff;
+}
