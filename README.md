@@ -1,5 +1,6 @@
 # spooky-meter
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/goibon/spooky-meter.svg?branch=master)](https://travis-ci.org/goibon/spooky-meter)
 
 A simple site that shows different levels of spookiness on the spooky scale :ghost:
 
