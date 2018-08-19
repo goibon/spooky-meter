@@ -2,12 +2,8 @@ body {
     background-color: black;
 }
 
-#spooky-meter {
+.spooky-meter-container {
 	text-align: center;
-}
-
-.spookymeter {
-    display: inline;
 }
 
 .ptr--content .ptr--icon {
