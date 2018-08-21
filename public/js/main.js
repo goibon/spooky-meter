@@ -1,6 +1,6 @@
-const spookyMeterImage = $('#spooky-meter').children('img')
-const spookyMeterImageSource = spookyMeterImage.attr('src')
-const title = $('title')
+const spookyMeterImage = document.getElementById('spooky-meter')
+const spookyMeterImageSource = spookyMeterImage.getAttribute('src')
+const title = document.getElementsByTagName('title')
 const spookyDescriptions = ['Not Spooky - It is safe but always be alert for skeletons',
   'Spoopy - No skeletons nearby but I\'m kind of scared anyway',
   'P Spoopy - Imminent danger of skeletons',
@@ -15,18 +15,18 @@ function randomizeSpookyLevel () {
 
 function updateSpookyMeterImage (src) {
   if (src) {
-    spookyMeterImage.attr('src', src)
+    spookyMeterImage.setAttribute('src', src)
     return
   }
-  spookyMeterImage.attr('src', '/images/level' + spookyLevel + '.gif')
+  spookyMeterImage.setAttribute('src', '/images/level' + spookyLevel + '.gif')
 }
 
 function updateTitle (text) {
   if (text) {
-    title.html(text)
+    title.innerHTML = text
     return
   }
-  title.html(spookyDescriptions[spookyLevel])
+  title.innerHTML = spookyDescriptions[spookyLevel]
 }
 
 window.PullToRefresh.init({
