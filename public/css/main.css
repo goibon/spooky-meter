@@ -6,6 +6,10 @@ body {
 	text-align: center;
 }
 
+#spooky-meter {
+	max-width: 100vw;
+}
+
 .ptr--content .ptr--icon {
     color: #fff;
 }
