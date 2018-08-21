@@ -17,3 +17,13 @@ body {
 .ptr--content .ptr--text {
     color: #fff;
 }
+
+#fork-me {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	#fork-me {
+		display: inline;
+	}
+}
