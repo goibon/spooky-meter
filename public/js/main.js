@@ -13,19 +13,11 @@ function randomizeSpookyLevel () {
   spookyLevel = Math.floor(Math.random() * (4 - 0 + 1)) + 0
 }
 
-function updateSpookyMeterImage (src) {
-  if (src) {
-    spookyMeterImage.setAttribute('src', src)
-    return
-  }
+function updateSpookyMeterImage () {
   spookyMeterImage.setAttribute('src', '/images/level' + spookyLevel + '.gif')
 }
 
-function updateTitle (text) {
-  if (text) {
-    title.innerHTML = text
-    return
-  }
+function updateTitle () {
   title.innerHTML = spookyDescriptions[spookyLevel]
 }
 
