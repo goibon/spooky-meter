@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
-const exphbs = require('express-handlebars')
 app.use(express.static(__dirname))
 app.use(express.static('public'))
-app.engine('handlebars', exphbs({defaultLayout: 'index'}))
-app.set('view engine', 'handlebars')
+app.set('view engine', 'pug')
 
 const spookyDescriptions = ['Not Spooky - It is safe but always be alert for skeletons',
   'Spoopy - No skeletons nearby but I\'m kind of scared anyway',
@@ -18,7 +16,7 @@ const moreButtonText = 'Spookier'
 
 app.get('/', function (request, response) {
   var spookylevel = Math.floor(Math.random() * (4 - 0 + 1)) + 0
-  response.render('spookymeter', {spookylevel: spookylevel,
+  response.render('layouts/index', {spookylevel: spookylevel,
     title: spookyDescriptions[spookylevel],
     lessButtonText: lessButtonText,
     randomButtonText: randomButtonText,
