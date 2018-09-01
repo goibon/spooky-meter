@@ -1,29 +1,22 @@
 import('./spookyMeter.js')
 .then(() => {
   const spookyMeterImage = document.getElementById('spooky-meter')
-  const spookyMeterImageSource = spookyMeterImage.getAttribute('src')
   const title = document.getElementsByTagName('title')
 
-  var spookyLevel = spookyMeterImageSource[spookyMeterImageSource.length - 5]
-
-  function randomizeSpookyLevel () {
-    spookyLevel = spookyMeter.getSpookyLevel()
-  }
-
-  function updateSpookyMeterImage () {
+  function updateSpookyMeterImage (spookyLevel) {
     spookyMeterImage.setAttribute('src', '/images/level' + spookyLevel + '.gif')
   }
 
-  function updateTitle () {
+  function updateTitle (spookyLevel) {
     title.innerHTML = spookyMeter.getSpookyDescription(spookyLevel)
   }
 
   window.PullToRefresh.init({
     mainElement: 'body',
     onRefresh: function () {
-      randomizeSpookyLevel()
-      updateSpookyMeterImage()
-      updateTitle()
+      const spookyLevel = spookyMeter.getSpookyLevel()
+      updateSpookyMeterImage(spookyLevel)
+      updateTitle(spookyLevel)
     }
   })
 })
