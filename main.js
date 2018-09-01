@@ -10,17 +10,10 @@ const spookyDescriptions = ['Not Spooky - It is safe but always be alert for ske
   'Spooky - There is a skeleton right behind you look out',
   '2Spooky - It is too late a skeleton is inside you']
 
-const lessButtonText = 'Less Spooky'
-const randomButtonText = 'Random Spooky Level'
-const moreButtonText = 'Spookier'
-
 app.get('/', function (request, response) {
   var spookylevel = Math.floor(Math.random() * (4 - 0 + 1)) + 0
   response.render('layouts/index', {spookylevel: spookylevel,
-    title: spookyDescriptions[spookylevel],
-    lessButtonText: lessButtonText,
-    randomButtonText: randomButtonText,
-    moreButtonText: moreButtonText})
+    title: spookyDescriptions[spookylevel]})
 })
 
 app.listen(8080, function () {
