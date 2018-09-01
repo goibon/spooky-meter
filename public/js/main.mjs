@@ -4,7 +4,7 @@ import('./spookyMeter.js')
   const title = document.getElementsByTagName('title')
 
   function updateSpookyMeterImage (spookyLevel) {
-    spookyMeterImage.setAttribute('src', '/images/level' + spookyLevel + '.gif')
+    spookyMeterImage.setAttribute('src', `/images/level${spookyLevel}.gif`)
   }
 
   function updateTitle (spookyLevel) {
