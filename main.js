@@ -9,7 +9,7 @@ app.get('/', function (request, response) {
   const spookylevel = spookyMeter.getSpookyLevel()
   response.render('layouts/index', {
     spookylevel: spookylevel,
-    title: spookyMeter.getSpookyDescription(spookylevel)
+    spookyDescription: spookyMeter.getSpookyDescription(spookylevel)
   })
 })
 
