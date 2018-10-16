@@ -5,6 +5,7 @@ import('./spookyMeter.js')
 
   function updateSpookyMeterImage (spookyLevel) {
     spookyMeterImage.setAttribute('src', `/images/level${spookyLevel}.gif`)
+    spookyMeterImage.setAttribute('alt', spookyMeter.getSpookyDescription(spookyLevel))
   }
 
   function updateTitle (spookyLevel) {
